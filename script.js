@@ -1,5 +1,12 @@
 let gridContainer = document.querySelector('#grid-container');
 
+function randomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 function buildGrid(size) {
     gridContainer.innerHTML = '';
 for (let i = 0; i < size * size; i++) {
@@ -9,7 +16,7 @@ for (let i = 0; i < size * size; i++) {
     gridItem.style.width = `${100 / size}%`;
     gridItem.style.height = `${100 / size}%`;
     gridItem.addEventListener('mouseover', function() {
-        gridItem.style.backgroundColor = '#005459';
+        gridItem.style.backgroundColor = randomColor();
     })
    
     gridContainer.appendChild(gridItem);
