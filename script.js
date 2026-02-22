@@ -17,6 +17,7 @@ for (let i = 0; i < size * size; i++) {
     gridItem.style.height = `${100 / size}%`;
     gridItem.addEventListener('mouseover', function() {
         gridItem.style.backgroundColor = randomColor();
+        gridItem.style.opacity = parseFloat(gridItem.style.opacity || 0) + 0.1;
     })
    
     gridContainer.appendChild(gridItem);
