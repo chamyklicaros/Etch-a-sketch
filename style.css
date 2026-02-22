@@ -23,7 +23,11 @@ body{
     border: 1px solid#005459;
     width: 6.25%;
     height: 6.25%;
-     box-sizing: border-box;
+    box-sizing: border-box;
 
+}
+
+.grid-item:hover{
+    background-color: #005459;
 }
 
