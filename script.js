@@ -1,8 +1,12 @@
+let maxGridRowSize = 16
+let maxgridColumnSize = maxGridRowSize
 
-let max = 5;
+let gridContainer = document.querySelector('#grid-container');
 
-for (let i = 0; i < max; i++) {
-    for (let j = 0; j < max; j++) {
-    console.log("#");
-    }
+
+for (let i = 0; i < maxGridRowSize * maxgridColumnSize; i++) {
+    let gridItem = document.createElement('div');
+    gridItem.classList.add('grid-item');
+    gridContainer.appendChild(gridItem);
 }
+
